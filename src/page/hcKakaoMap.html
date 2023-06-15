@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">  
+	<title>지도</title>  
+  <script src="../external/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=68ae6dc019c300ab9952102ddde44eb8"></script>
+  <script src="../js/hcKakaoMap/hcKakaoMap.js"></script>    
+  <script>
+    $(document).ready(function() {
+      $('#mapWrap').hcKakaoMap({
+          data : [
+            {
+              id : 'test1',
+              nameMarkup : '<span style="font-size:12px">테스트1 매장</span>',
+              lat : 37.266182,
+              lng : 126.999891
+            },
+            {
+              id : 'test2',
+              nameMarkup : '<span>테스트2 매장</span>',
+              lat : 37.504380,
+              lng : 126.762202
+            }
+          ]
+      });
+    });
+  </script>        
+</head>
+<body>  
+  <div id="mapWrap">
+    <div id="test1" style="width:500px;height:400px;"></div>
+    <div id="test2" style="width:500px;height:400px;"></div>
+  </div>
+</body>
+</html>
