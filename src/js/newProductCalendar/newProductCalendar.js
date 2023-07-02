@@ -9,7 +9,7 @@
             lockDays : [],
             prevButtonText : '<span> < </span>',
             nextButtonText : '<span> > </span>',
-            noItemText : '상품이 없습니다.',
+            noItem : function() { return '상품이 없습니다.' },
             itemMarkup : function(data) {
                 if(!data.link) data.link = '#';
                 return `
@@ -61,7 +61,7 @@
 
         function makeItemList(list) {
 			if(list.length < 1) {
-				return settings.noItemText;
+				return settings.noItem();
 			}else{
 				var listArray = [];                
 				$.each(list,function(index,item) {
